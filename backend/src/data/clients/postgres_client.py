@@ -11,6 +11,9 @@ from sqlalchemy.ext.asyncio import (
 from src.config.settings import settings
 
 
+_engine: AsyncEngine | None = None
+
+
 async def get_or_create_engine() -> AsyncEngine:
     global _engine
 
